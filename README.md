@@ -20,15 +20,6 @@ Replication
 Distributed transparent file access
 
 Clients can read from and write to files on fileservers. The client side application is a text editor and viewer. The client application's functionality comes from the client library (client_lib.py). The client never downloads or uploads a file from a fileserver, it downloads or uploads the contents of the file.
-
-The client can use the following commands to access files:
-
-  <write> [filename]  # write to file mode
-  <end>           # finish writing
-  <read> [filename]   # read from file mode
-  <list>          # lists all existing files
-  <instructions>      # lets you see the instructions 
-  <quit>          # exits the application
   
 Directory service:
 A directory service is used to map the file name that the client requests to a file server. The directory service uses a separate container to file to store the mappings (file_mappings.csv). This stores the actual name of the file, the file server IP and Port it is stored on and whether the file server is holds the primary copy or not.
